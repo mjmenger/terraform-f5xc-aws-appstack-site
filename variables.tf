@@ -16,6 +16,10 @@ variable "namespace" {
   type        = string
 }
 
+variable "trusted_ip" {
+  type        = string
+  description = "IP to allow external access"
+}
 
 variable "volterraCloudCredAWS" {
   description = "Name of the volterra aws credentials"
