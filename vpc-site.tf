@@ -60,7 +60,7 @@ resource "volterra_aws_vpc_site" "example" {
     // no_k8s_cluster           = true
     no_global_network        = true
     #default_storage         = ""
-     k8s_cluster {
+    k8s_cluster {
       namespace = "system"
       name      = "pki-k8s"
     }
