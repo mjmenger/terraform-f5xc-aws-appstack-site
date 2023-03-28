@@ -2,6 +2,8 @@ resource "volterra_aws_vpc_site" "example" {
     name       = format("%s-appstackvpc-%s", var.projectPrefix, var.instanceSuffix)
     namespace  = "system"
     aws_region = var.awsRegion
+    depends_on = [volterra_k8s_cluster.example]
+
     vpc {
         vpc_id     = var.vpcId
     }
@@ -125,4 +127,5 @@ resource "volterra_tf_params_action" "aws_vpc_action" {
   action           = "apply"
   wait_for_action  = true
   ignore_on_update = false
+  depends_on = [volterra_k8s_cluster.example]
 }
