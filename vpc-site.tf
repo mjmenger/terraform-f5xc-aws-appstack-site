@@ -57,7 +57,7 @@ resource "volterra_aws_vpc_site" "example" {
     no_network_policy        = true
     no_forward_proxy         = true
     no_outside_static_routes = true
-    no_k8s_cluster           = true
+    k8s_cluster              = true
     no_global_network        = true
     #default_storage         = ""
     }
