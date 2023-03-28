@@ -11,11 +11,6 @@ variable "instanceSuffix" {
   type = string
 }
 
-variable "trusted_ip" {
-  type        = string
-  description = "IP to allow external access"
-}
-
 variable "namespace" {
   description = "Volterra application namespace"
   type        = string
@@ -23,11 +18,6 @@ variable "namespace" {
 
 
 variable "volterraCloudCredAWS" {
-  description = "Name of the volterra aws credentials"
-  type        = string
-}
-
-variable "volterraCloudCredAzure" {
   description = "Name of the volterra aws credentials"
   type        = string
 }
@@ -53,11 +43,6 @@ variable "awsAz3" {
   default     = null
 }
 
-variable "volterraP12" {
-  description = "Location of volterra p12 file"
-  type        = string
-  default     = null
-}
 variable "volterraUrl" {
   description = "url of volterra api"
   type        = string
@@ -80,3 +65,10 @@ variable "workloadSubnets" {
 variable "spokeVpcId" {}
 variable "spoke2VpcId" {}
 variable "ssh_public_key" {}
+
+variable k8s_cluster_name {
+  type = string
+}
+variable k8s_cluster_namespace {
+  type = string
+}
