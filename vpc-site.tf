@@ -55,16 +55,16 @@ resource "volterra_aws_vpc_site" "example" {
             }
         }
 
-    no_network_policy        = true
-    no_forward_proxy         = true
-    no_outside_static_routes = true
-    // no_k8s_cluster           = true
-    no_global_network        = true
-    #default_storage         = ""
-    k8s_cluster {
-      namespace = var.k8s_cluster_namespace
-      name      = var.k8s_cluster_name
-    }
+        no_network_policy        = true
+        no_forward_proxy         = true
+        no_outside_static_routes = true
+        // no_k8s_cluster           = true
+        no_global_network        = true
+        #default_storage         = ""
+        k8s_cluster {
+            namespace = var.k8s_cluster_namespace
+            name      = var.k8s_cluster_name
+        }
 
     }
 
