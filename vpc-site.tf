@@ -19,7 +19,7 @@ resource "volterra_aws_vpc_site" "example" {
     // One of the arguments from this list "direct_connect_disabled direct_connect_enabled" must be set
     direct_connect_disabled = true
     // Minimum resource requirements can be found https://docs.cloud.f5.com/docs/how-to/site-management/create-aws-site
-    instance_type           = "t3.xlarge"  
+    instance_type           = var.k8s_node_instance_type 
 
     // One of the arguments from this list "logs_streaming_disabled log_receiver" must be set
     logs_streaming_disabled = true
