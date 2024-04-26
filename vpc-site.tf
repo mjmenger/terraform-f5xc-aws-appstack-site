@@ -2,6 +2,7 @@ resource "volterra_aws_vpc_site" "example" {
     name       = format("%s-appstackvpc-%s", var.project_prefix, var.instance_suffix)
     namespace  = "system"
     aws_region = var.aws_region
+    ssh_key    = var.ssh_public_key
   
     vpc {
         vpc_id     = var.vpc_id
