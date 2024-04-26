@@ -58,4 +58,7 @@ variable k8s_node_disk_size {
   type = number
   default = 80
 }
-
+variable k8s_node_instance_type {
+  type = string
+  default = "t3.xlarge"  
+}
